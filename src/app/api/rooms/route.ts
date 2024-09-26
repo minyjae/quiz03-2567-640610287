@@ -1,4 +1,4 @@
-import { DB, readDB, Room, Message, User, writeDB, Database } from "@lib/DB";
+import { DB, readDB, Room, User, writeDB} from "@lib/DB";
 import { checkToken } from "@lib/checkToken";
 import { nanoid } from "nanoid";
 import { NextRequest, NextResponse } from "next/server";
