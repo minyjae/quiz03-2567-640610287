@@ -5,7 +5,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const GET = async () => {
   readDB();
-  let rooms = (<Room>DB).rooms;
+  const rooms = (<Room>DB).rooms;
   const totalRooms = rooms.length;
   return NextResponse.json({
     ok: true,
@@ -30,7 +30,7 @@ export const POST = async (request: NextRequest) => {
   readDB();
   const body = await request.json();
   const { roomName } = body;
-  const foundRoomName = (<Room>DB).rooms.find((x: { roomName: any; }) => x.roomName === roomName)
+  const foundRoomName = (<Room>DB).rooms.find((x: { roomName: string; }) => x.roomName === roomName)
   if(foundRoomName) {
     return NextResponse.json(
     {
