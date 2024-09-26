@@ -3,20 +3,20 @@ import { LowSync, MemorySync } from "lowdb";
 import { JSONFileSync } from "lowdb/node";
 
 export interface Room {
-  rooms: string;
+  rooms: any;
   roomId: string;
   roomName: string;
 }
 
 export interface Message {
-  messages: string;
+  messages: any;
   roomId: string;
   messageId: string;
   messageText: string;
 }
 
 export interface User {
-  users: string;
+  users: any;
   username: string;
   password: string;
   role: "ADMIN" | "SUPER_ADMIN";
